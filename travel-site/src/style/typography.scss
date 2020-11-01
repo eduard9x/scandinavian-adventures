@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'Fahkwang';
+  src: url('./../fonts/Fahkwang-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: 'Mulish black';
+  src: url('./../fonts/Mulish-Black.ttf');
+}
+
+@font-face {
+  font-family: 'Mulish bold';
+  src: url('./../fonts/Mulish-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Mulish regular';
+  src: url('./../fonts/Mulish-Regular.ttf');
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Fahkwang, sans-serif;
+}

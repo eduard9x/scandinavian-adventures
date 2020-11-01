@@ -10,7 +10,11 @@ module.exports = {
     './src/**/*.tsx',
   ],
   theme: {
-    extend: {},
+    extend: {
+      outline: {
+        black: '2px solid #000',
+      }
+    },
   },
   variants: {},
   plugins: [],
