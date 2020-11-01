@@ -33,17 +33,27 @@ const Header = ({ siteTitle }) => (
         </Link>
       </h3>
 
-      <ul style={{
-        margin: 0,
-        padding: 0,
-        listStyleType: 'none',
-        display: 'inline-flex'
-      }}>
-        <li className='pr-3 mb-0'>Experiences</li>
-        <li className='pr-3 mb-0'>Company</li>
-        <li className='pr-3 mb-0'>Support</li>
-        <li className='mb-0'>Cart</li>
-      </ul>
+      <nav className='nav'>
+        <ul style={{
+          margin: 0,
+          padding: 0,
+          listStyleType: 'none',
+          display: 'inline-flex'
+        }}>
+          <li className='pr-3 mb-0'>
+            <Link to="/experiences/">Experiences</Link>
+          </li>
+          <li className='pr-3 mb-0'>
+            <Link to="/company/">Company</Link>
+          </li>
+          <li className='pr-3 mb-0'>
+            <Link to="/support/">Support</Link>
+          </li>
+          <li className='mb-0'>
+            <Link to="/cart/">Cart</Link>
+          </li>
+        </ul>
+      </nav>
     </div>
   </header>
 )
