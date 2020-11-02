@@ -4,7 +4,7 @@ import BookButton from './book-button'
 
 const Carousel = ({items}: Destination[]) => {
   return (
-    <div className='w-screen pl-5 py-6 bg-gray-efed'>
+    <div className='w-screen pl-5 py-6 bg-gray-efed' style={{maxWidth: 1280}}>
       <h2 className='carousel-title pb-3 text-dark-222 lg:text-center'>
         Adventure awaits out there
       </h2>

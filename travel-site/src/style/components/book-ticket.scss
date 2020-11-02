@@ -1,0 +1,20 @@
+.minus {
+  height: 2px;
+}
+
+.plus {
+  height: 2px;
+  position: relative;
+
+  &:after {
+    content: '';
+    height: 2px;
+    width: 20px;
+    position: absolute;
+    background-color: white;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+}

@@ -22,8 +22,7 @@ const DetailsPage = ({ location }) => {
       <SEO title="Details page"/>
 
       <div className='image-holder'style={{
-        background: `url(${mediaUrl}) 50% 50% no-repeat`,
-        backgroundSize: 'cover',
+        background: `url(${mediaUrl}) 50% 50% / cover no-repeat`,
         width: '100vw',
         height: '100vh',
         maxWidth: 1280,

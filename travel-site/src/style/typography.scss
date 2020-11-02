@@ -30,6 +30,7 @@ h1, h2, h3, h4, h5, h6,
 .featured-cost,
 .carousel-subtitle,
 .item-cost,
+.ticket-audience,
 {
   font-family: "Mulish regular", sans-serif;
 }
@@ -98,4 +99,10 @@ h1, h2, h3, h4, h5, h6,
   font-size: 12px;
   line-height: 15px;
   letter-spacing: 1.09091px;
+}
+
+.ticket-audience {
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 1.27273px;
 }
