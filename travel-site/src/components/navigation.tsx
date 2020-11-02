@@ -11,13 +11,18 @@ class Navigation extends React.Component {
   }
 
   toggle () {
-    this.setState({open: !this.state.open});
+    if (this.state.open) {
+      document.body.classList.remove('overflow-hidden');
+    } else {
+      document.body.classList.add('overflow-hidden');
+    }
+    this.setState({open: !this.state.open})
   }
 
   render () {
     return (
       <>
-        <button className='px-1 outline-black' onClick={() => this.toggle()}>
+        <button className='p-1 focus:outline-black lg:hidden' onClick={() => this.toggle()}>
           <div id="nav-icon4" className={this.state.open ? 'open' : ''}>
             <span></span>
             <span></span>

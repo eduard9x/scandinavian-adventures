@@ -3,4 +3,7 @@
 @tailwind utilities;
 
 @import './typography';
+@import './variables';
+@import './utilities';
+@import './components/header';
 @import './components/menu';
