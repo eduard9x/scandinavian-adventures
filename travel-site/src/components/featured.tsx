@@ -9,9 +9,9 @@ const Featured = ({data, first}) => {
   const body = data?.body?.split('\n').join('\n\n');
 
   return (
-    <div className={`w-full ${first ? 'md:pr-2 lg:w-2/6' : 'md:pl-2 lg:w-4/6'} md:w-1/2 my-10`}>
+    <div className={`featured ${first ? 'featured-first' : 'featured-second'} w-full my-10`}>
       <div className='image-holder relative'>
-        <img style={{ width: '100%', }} src={data.media[mobile ? 'small' : 'large'].url}/>
+        <img style={{ width: '100%', height: 418 }} src={data.media[mobile ? 'small' : 'large'].url}/>
         <div className='absolute flex flex-col top-0 right-0 bottom-0 left-0 justify-end px-5 md:p-3'>
           <h2 className='featured-title pb-4 text-white md:p-4'>{data.title}</h2>
         </div>
@@ -23,8 +23,8 @@ const Featured = ({data, first}) => {
           {`From ${data.price.currencyCode === 'GBP' ? '£' : ''}${data.price.value} ${data.price.unit}`}
         </p>
       </div>
-      <div className='mt-4 pt-5'>
-        <BookButton full={true} id={data.id} featured={true}/>
+      <div className='mt-auto pt-5'>
+        <BookButton id={data.id} featured={true}/>
       </div>
     </div>
   )

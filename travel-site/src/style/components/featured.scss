@@ -1,0 +1,16 @@
+@media (min-width: 1024px) {
+  .featured {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    &.featured-first {
+      flex: 0.33 0.33 300px;
+      margin-right: 10px;
+    }
+    &.featured-second {
+      flex: 1 1 300px;
+      margin-left: 10px;
+    }
+  }
+}
