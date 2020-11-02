@@ -6,7 +6,7 @@ import Navigation from './navigation'
 const Header = ({siteTitle, goesBack}) => (
   <header className='bg-white'>
     <div className='my-0 mx-auto py-6 px-5 justify-between flex items-center h-full'
-         style={{maxWidth: 960}}>
+         style={{maxWidth: 1280}}>
       <h3 className='m-0 inline-flex'>
         <Link to="/" className='text-black no-underline focus:outline-black'>{siteTitle}</Link>
       </h3>

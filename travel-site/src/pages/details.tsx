@@ -26,7 +26,7 @@ const DetailsPage = ({ location }) => {
         backgroundSize: 'cover',
         width: '100vw',
         height: '100vh',
-        maxWidth: 960,
+        maxWidth: 1280,
       }}>
       </div>
 

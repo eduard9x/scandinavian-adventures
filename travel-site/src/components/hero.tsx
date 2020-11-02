@@ -5,10 +5,9 @@ import isMobile from '../utils/mobile'
 
 const Hero = ({data}: Destination) => {
   const mobile: boolean = isMobile();
-  console.log('>> window.innerWidth: ', window.innerWidth, mobile);
 
   return (
-    <div className='w-screen relative lg:w-full lg:mx-0 -mx-5'>
+    <div className='w-screen relative md:w-full md:mx-0'>
       <div className='image-holder' style={{
         // background: 'url(' + data.media['large'].url + ') 50% 50% no-repeat',
         // width: '100vw',
