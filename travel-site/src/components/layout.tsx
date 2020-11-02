@@ -29,13 +29,7 @@ const Layout = ({children, goesBack}) => {
       <div className='px-5'
            style={{margin: `0 auto`, maxWidth: 960}}>
         <main>{children}</main>
-        <footer style={{
-          marginTop: `2rem`,
-        }}>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
+        <footer className='py-12' />
       </div>
     </>
   )

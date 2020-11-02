@@ -21,14 +21,21 @@
 h1, h2, h3, h4, h5, h6,
 .menu li,
 .book-button,
+.item-title,
 {
   font-family: Fahkwang, sans-serif;
 }
 
 .featured-title,
 .featured-cost,
+.carousel-subtitle,
+.item-cost,
 {
   font-family: "Mulish regular", sans-serif;
+}
+
+.carousel-title {
+  font-family: "Mulish black", sans-serif;
 }
 
 .menu li {
@@ -64,4 +71,31 @@ h1, h2, h3, h4, h5, h6,
 .book-button {
   font-size: 14px;
   line-height: 18px;
+}
+
+.carousel-title {
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: 1.63636px;
+}
+
+.carousel-subtitle {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 1.27273px;
+}
+
+.item-title {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 1.27273px;
+}
+
+.item-cost {
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 1.09091px;
 }

@@ -10,16 +10,19 @@ import isMobile from '../utils/mobile'
 const DetailsPage = ({ location }) => {
   const data = Destinations.find(location.state.pageId, location.state.featured);
   const body = data?.body?.split('\n').join('\n\n');
-
   const mobile: boolean = isMobile();
-  console.log('>> window.innerWidth: ', window.innerWidth, mobile);
+
+  let mediaUrl = data.media['small'].url;
+  if (location.state.featured && !mobile) {
+    mediaUrl = data.media['large'].url;
+  }
 
   return (
     <Layout goesBack={true}>
       <SEO title="Details page"/>
 
       <div className='image-holder -mx-5'style={{
-        background: 'url(' + data.media[mobile ? 'small' : 'large'].url + ') 50% 50% no-repeat',
+        background: `url(${mediaUrl}) 50% 50% no-repeat`,
         backgroundSize: 'cover',
         width: '100vw',
         height: '100vh',

@@ -7,6 +7,7 @@ import SEO from '../components/seo'
 import JSONData from '../data/data.json'
 import Hero from '../components/hero'
 import Featured from '../components/featured'
+import Carousel from '../components/carousel'
 
 const IndexPage = () => (
   <Layout>
@@ -18,30 +19,7 @@ const IndexPage = () => (
 
     <Featured data={JSONData.featured[2]} />
 
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <p>Featured ID: { JSONData.featured[0].id }</p>
-    {/*<p>{`${process.env.GATSBY_API_URL}/another-thing`}</p>*/}
-    <div style={{maxWidth: `300px`, marginBottom: `1.45rem`}}>
-      <Image/>
-    </div>
-    <Link to="/details/">Go to details page</Link> <br/>
-
-    <ul>
-      <li className='py-64'></li>
-      <li className='py-64'></li>
-      <li className='py-64'></li>
-      <li className='py-64'></li>
-      <li className='py-64'></li>
-    </ul>
-
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
+    <Carousel items={JSONData.carousel.items}/>
   </Layout>
 )
 
