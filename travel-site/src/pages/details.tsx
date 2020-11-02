@@ -4,7 +4,8 @@ import { Link } from 'gatsby'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 
-const DetailsPage = () => {
+const DetailsPage = ({ location }) => {
+  console.log('>> pageId: ', location.state.pageId);
   return (
     <Layout>
       <SEO title="Details page"/>

@@ -19,8 +19,16 @@
 }
 
 h1, h2, h3, h4, h5, h6,
-.menu li {
+.menu li,
+.book-button,
+{
   font-family: Fahkwang, sans-serif;
+}
+
+.featured-title,
+.featured-cost,
+{
+  font-family: "Mulish regular", sans-serif;
 }
 
 .menu li {
@@ -30,4 +38,30 @@ h1, h2, h3, h4, h5, h6,
   @media (min-width: 1024px) {
     font-family: "Mulish regular", sans-serif;
   }
+}
+
+.featured-title {
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: 1.63636px;
+  font-weight: bold;
+
+  @media (min-width: 1024px) {
+    font-family: Fahkwang, sans-serif;
+  }
+}
+
+.featured-cost {
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 1.27273px;
+
+  @media (min-width: 1024px) {
+    font-family: Fahkwang, sans-serif;
+  }
+}
+
+.book-button {
+  font-size: 14px;
+  line-height: 18px;
 }

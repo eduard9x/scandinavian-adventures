@@ -6,11 +6,23 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-remote-images`,
+      options: {
+        nodeType: 'MyNodes',
+        // Making this plural (optional).
+        name: 'localImages',
+        // Path to the leaf node.
+        imagePath: 'images',
+        // Set type to array.
+        type: 'array'
+      }
+    },
+    {
       resolve: `gatsby-plugin-sass`,
       options: {
         postCssPlugins: [
-          require("tailwindcss"),
-          require("./tailwind.config.js"), // Optional: Load custom Tailwind CSS configuration
+          require('tailwindcss'),
+          require('./tailwind.config.js'), // Optional: Load custom Tailwind CSS configuration
         ],
       },
     },
@@ -40,4 +52,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};

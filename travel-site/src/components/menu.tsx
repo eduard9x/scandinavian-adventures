@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { Link } from 'gatsby'
+import PropTypes from 'prop-types'
 
 const Menu = ({open}) => (
   <div className={`menu lg:relative lg:visible lg:opacity-100 ${open ? 'open' : ''}`}>
@@ -20,5 +21,13 @@ const Menu = ({open}) => (
       </ul>
   </div>
 )
+
+Menu.propTypes = {
+  open: PropTypes.bool,
+}
+
+Menu.defaultProps = {
+  open: false,
+}
 
 export default Menu
