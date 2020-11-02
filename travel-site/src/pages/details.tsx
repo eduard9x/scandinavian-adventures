@@ -18,8 +18,7 @@ const DetailsPage = ({ location }) => {
     <Layout goesBack={true}>
       <SEO title="Details page"/>
 
-      <div className='image-holder'style={{
-        margin: '0 -1.0875rem',
+      <div className='image-holder -mx-5'style={{
         background: 'url(' + data.media[mobile ? 'small' : 'large'].url + ') 50% 50% no-repeat',
         backgroundSize: 'cover',
         width: '100vw',
