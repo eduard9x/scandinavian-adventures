@@ -11,7 +11,7 @@ const Hero = ({data}: Destination) => (
       <h2 className='featured-title pb-3 text-white'>{ data.title }</h2>
       <p className='featured-cost pb-4 text-white'>{`From ${data.price.currencyCode === 'GBP' ? '£' : ''}${data.price.value} ${data.price.unit}`}</p>
       <div>
-        <BookButton id={data.id} variant='white' />
+        <BookButton id={data.id} variant='white' featured={true} />
       </div>
     </div>
   </div>
