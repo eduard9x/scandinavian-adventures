@@ -1,8 +1,6 @@
 import React from 'react'
-import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
-import BookingImage from '../components/bookingImage'
 import SEO from '../components/seo'
 import JSONData from '../data/data.json'
 import Hero from '../components/hero'

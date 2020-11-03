@@ -27,7 +27,7 @@ const Layout = ({children, goesBack}) => {
       <Header siteTitle={data.site.siteMetadata?.title || `Title`}
               goesBack={goesBack}/>
       <div className='my-0 mx-auto' style={{maxWidth: 1280}}>
-        <main>{children}</main>
+        <main className='pt-20'>{children}</main>
         <footer className='py-12' />
       </div>
     </>
