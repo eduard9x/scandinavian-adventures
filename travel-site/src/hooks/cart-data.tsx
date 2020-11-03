@@ -2,6 +2,10 @@ import { useEffect, useState } from 'react'
 import { Cart } from '../models/cart'
 
 const CartData = () => {
+  if (typeof window === 'undefined') {
+    return {};
+  }
+
   const [cart, setCart] = useState({})
 
   useEffect(() => {

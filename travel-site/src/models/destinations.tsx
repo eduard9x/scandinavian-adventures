@@ -9,6 +9,9 @@ export class Destinations {
   };
 
   static find (id: string, isFeatured: boolean = false) {
+    if(!id) {
+      return;
+    }
     const list: Destination[] = isFeatured ? [...JSONData.featured]
       : [...JSONData.carousel.items];
     return list.find(dest => dest.id === id);

@@ -12,20 +12,25 @@ class BookTicket extends React.Component<Ticket> {
       children: 0,
     }
 
-    if (!props.id) {
-      navigate('/')
-    }
-    const cart = JSON.parse(localStorage.getItem('cart') || '{}')
-    if (cart[props.id]) {
-      this.state = {
-        adults: cart[props.id].adults,
-        children: cart[props.id].children,
+    if (typeof window !== 'undefined') {
+      if (!props.id) {
+        navigate('/')
+      }
+      const cart = JSON.parse(localStorage?.getItem('cart') || '{}')
+      if (cart[props.id]) {
+        this.state = {
+          adults: cart[props.id].adults,
+          children: cart[props.id].children,
+        }
       }
     }
     this.saveItems = this.saveItems.bind(this)
   }
 
   saveItems = () => {
+    if (typeof window === 'undefined') {
+      return;
+    }
     const cart: Cart = JSON.parse(localStorage.getItem('cart') || '{}')
     cart[this.props.id] = {
       id: this.props.id,
