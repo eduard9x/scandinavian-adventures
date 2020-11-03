@@ -14,8 +14,8 @@ const Carousel = ({items}: Destination[]) => {
 
       <ul className='m-0 p-0 list-none flex overflow-x-scroll'>
         {items.map((data: Destination) => (
-          <li key={data.id} className='pr-5'>
-            <div className='bg-black width-275 width-285'>
+          <li key={data.id} className='pr-5 width-quarter'>
+            <div className='bg-black width-275 width-full'>
               <img style={{width: '100%'}} src={data.media['small'].url}/>
               <div className='p-5'>
                 <h5 className='item-title pt-4 pb-2 text-white'>{data.title}</h5>

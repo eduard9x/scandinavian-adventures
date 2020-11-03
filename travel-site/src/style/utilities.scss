@@ -25,10 +25,15 @@
 
 .width-275 {
   width: 275px;
+  min-width: 275px;
 }
 
-@media (min-width: 1024px) {
-  .width-285 {
-    width: 285px;
+// (275+20) * 4
+@media (min-width: 1180px) {
+  .width-full {
+    width: 100%;
+  }
+  .width-quarter {
+    width: 25%;
   }
 }
