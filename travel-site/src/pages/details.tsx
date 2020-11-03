@@ -29,26 +29,16 @@ const DetailsPage = ({ location }) => {
       }}>
       </div>
 
-      {/*<div className='w-screen' style={{margin: `0 -1.0875rem`}}>*/}
-      {/*  <img src={data.media['small'].url} />*/}
-      {/*</div>*/}
       <div className='pt-6 px-4'>
         <h2 className='featured-title pb-3 text-black'>{ data.title }</h2>
         <p className='featured-cost pb-4 text-black'>{`From ${data.price.currencyCode === 'GBP' ? '£' : ''}${data.price.value} ${data.price.unit}`}</p>
       </div>
 
-      <BookTicket id={location.state.pageId} featured={location.state.featured} />
+      <BookTicket id={location.state.pageId} featured={location.state.featured} price={data.price.value} currency={data.price.currencyCode === 'GBP' ? '£' : ''}/>
 
-      {/*<div className='pt-8'>*/}
-      {/*  <p>{ data?.body }</p>*/}
-      {/*</div>*/}
-
-      {/*<div*/}
-      {/*  className="blog-post-content"*/}
-      {/*  dangerouslySetInnerHTML={{ __html: data?.body }}*/}
-      {/*/>*/}
-
-      <ReactMarkdown children={body} />
+      <div className='pt-4 mb-6 px-4'>
+        <ReactMarkdown children={body} />
+      </div>
     </Layout>
   )
 }

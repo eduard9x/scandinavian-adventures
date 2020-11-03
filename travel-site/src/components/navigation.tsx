@@ -23,16 +23,16 @@ class Navigation extends React.Component {
     return (
       <>
         <button className='p-1 focus:outline-black lg:hidden'
-                onClick={() => this.props.goesBack ? navigate('/') : this.toggle()}>
+                onClick={() => this.toggle()}>
           <div id="nav-icon4"
-               className={this.state.open || this.props.goesBack ? 'open' : ''}>
+               className={this.state.open ? 'open' : ''}>
             <span></span>
             <span></span>
             <span></span>
           </div>
         </button>
 
-        {this.props.goesBack ? null : <Menu open={this.state.open}/>}
+        <Menu open={this.state.open}/>
       </>
     )
   }

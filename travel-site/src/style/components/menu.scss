@@ -127,3 +127,20 @@
     width: auto;
   }
 }
+
+.bookings {
+  .gatsby-image-wrapper {
+    width: 19px;
+  }
+
+  &.active:after {
+    content: '';
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #FC7C3A;
+    position: absolute;
+    top: 10px;
+    right: 6px;
+  }
+}

@@ -2,11 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { navigate } from 'gatsby'
 
-const BookButton = ({id, title, variant, featured, full}) => {
+const BookButton = ({id, title, variant, featured, full, callback}) => {
   return (
     <>
       <button className={`book-button p-5 ${full ? 'w-full' : ''}`}
-              onClick={() => navigate(`/details`, {
+              onClick={() => callback ? callback() : navigate(`/details`, {
                 state: {
                   pageId: id,
                   featured,

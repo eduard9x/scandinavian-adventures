@@ -1,17 +1,47 @@
 import React from 'react'
 import BookButton from './book-button'
+import { Cart, CartItem } from '../models/cart'
 
 class BookTicket extends React.Component {
   constructor (props) {
     super(props)
-    this.state = {
-      adults: 10,
-      children: 22,
+    if (!props.id) {
+      navigate('/');
     }
+
+    let initialState = {
+      adults: 1,
+      children: 0,
+    }
+    const cart = JSON.parse(localStorage.getItem('cart') || '{}')
+    if (cart[props.id]) {
+      initialState = {
+        adults: cart[props.id].adults,
+        children: cart[props.id].children,
+      }
+    }
+
+    this.state = initialState;
+    this.saveItems = this.saveItems.bind(this);
+  }
+
+  saveItems() {
+    const cart: Cart = JSON.parse(localStorage.getItem('cart') || '{}') ;
+    cart[this.props.id] = {
+      id: this.props.id,
+      adults: this.state.adults,
+      children: this.state.children,
+      currency: this.props.currency,
+      price: this.props.price,
+    } as CartItem;
+    localStorage.setItem('cart', JSON.stringify(cart));
   }
 
   changeTickets(key: string, newValue: string) {
     const safeInt = parseInt(newValue, 10);
+    if(safeInt < 0) {
+      return;
+    }
     if (key === 'adults') {
       this.setState({ adults: safeInt });
     } else {
@@ -41,7 +71,10 @@ class BookTicket extends React.Component {
             </div>
           </div>
         ))}
-        <BookButton id={this.props.id} featured={this.props.featured}/>
+
+        <p className='ticket-audience text-dark-222 font-bold mb-8 mt-12 pt-2'>Total {this.props.currency}{this.props.price * (this.state.adults + this.state.children)}</p>
+
+        <BookButton id={this.props.id} featured={this.props.featured} callback={this.saveItems} />
       </div>
     )
   }
