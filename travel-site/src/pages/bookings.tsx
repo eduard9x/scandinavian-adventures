@@ -4,9 +4,10 @@ import { Link } from 'gatsby'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import { Cart, CartItem } from '../models/cart'
+import CartData from '../hooks/cart-data'
 
 const BookingsPage = () => {
-  const cart: Cart = JSON.parse(localStorage.getItem('cart') || '{}');
+  const cart: Cart = CartData();
 
   let grandTotal = 0;
   let generalCurrency;

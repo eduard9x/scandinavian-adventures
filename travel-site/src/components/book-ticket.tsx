@@ -35,6 +35,7 @@ class BookTicket extends React.Component {
       price: this.props.price,
     } as CartItem;
     localStorage.setItem('cart', JSON.stringify(cart));
+    window.dispatchEvent(new Event('cart'));
   }
 
   changeTickets(key: string, newValue: string) {

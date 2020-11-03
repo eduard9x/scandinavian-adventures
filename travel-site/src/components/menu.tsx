@@ -3,9 +3,12 @@ import React from 'react'
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import BasketImage from './basket-image'
+import { Cart } from '../models/cart'
+import CartData from '../hooks/cart-data'
 
 const Menu = ({open}) => {
-  const cart = JSON.parse(localStorage.getItem('cart') || '{}');
+  const cart: Cart = CartData();
+
   return (
     <div className={`menu lg:relative lg:visible lg:opacity-100 ${open ? 'open' : ''}`}>
       <ul className='lg:flex lg:items-center m-0 p-5 left-0 right-0 list-none absolute lg:relative lg:flex-row lg:flex lg:p-0'>

@@ -1,6 +1,5 @@
 import React from 'react'
 import Menu from './menu'
-import { navigate } from 'gatsby'
 
 class Navigation extends React.Component {
   constructor (props) {
