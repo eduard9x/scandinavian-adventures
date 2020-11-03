@@ -40,7 +40,8 @@ const DetailsPage = ({location}) => {
           </div>
 
           <BookTicket id={location.state.pageId}
-                      featured={location.state.featured} price={data.price.value}
+                      featured={location.state.featured}
+                      price={data.price.value}
                       currency={data.price.currencyCode === 'GBP' ? '£' : ''}/>
         </div>
 
