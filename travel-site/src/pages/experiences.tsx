@@ -8,9 +8,11 @@ const ExperiencesPage = () => {
   return (
     <Layout>
       <SEO title="Experiences page"/>
-      <h1>Hi from the Experiences page</h1>
-      <p>Welcome to Experiences page</p>
-      <Link to="/">Go back to the homepage</Link>
+      <div className='px-5'>
+        <h1 className='mt-8'>Hi from the Experiences page</h1>
+        <p>Welcome to Experiences page</p>
+        <Link className='mt-8' to="/">Go back to the homepage</Link>
+      </div>
     </Layout>
   )
 }

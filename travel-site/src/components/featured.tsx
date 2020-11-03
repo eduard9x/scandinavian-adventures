@@ -2,6 +2,7 @@ import React from 'react'
 import BookButton from './book-button'
 import isMobile from '../utils/mobile'
 import ReactMarkdown from 'react-markdown'
+import PropTypes from 'prop-types'
 
 const Featured = ({data, first}) => {
   const mobile: boolean = isMobile();
@@ -28,6 +29,16 @@ const Featured = ({data, first}) => {
       </div>
     </div>
   )
+}
+
+Featured.propTypes = {
+  data: PropTypes.string,
+  first: PropTypes.bool,
+}
+
+Featured.defaultProps = {
+  data: {},
+  first: true,
 }
 
 export default Featured

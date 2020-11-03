@@ -1,40 +1,33 @@
-import React from 'react'
+import { navigate } from 'gatsby';
+import React, { useState } from 'react'
 import Menu from './menu'
+import PropTypes from 'prop-types'
 
-class Navigation extends React.Component {
-  constructor (props) {
-    super(props)
-    this.state = {
-      open: false,
-    }
-  }
+const Navigation = ({ goesBack }) => {
+  const [open, setOpen] = useState(goesBack);
 
-  toggle () {
-    if (this.state.open) {
-      document.body.classList.remove('overflow-hidden')
-    } else {
-      document.body.classList.add('overflow-hidden')
-    }
-    this.setState({open: !this.state.open})
-  }
+  return (
+    <>
+      <button className={`p-1 focus:outline-black ${goesBack ? '' : 'lg:hidden'}`}
+              onClick={() => goesBack ? navigate('/') : setOpen(!open)}>
+        <div id="nav-icon4"
+             className={open || goesBack ? 'open' : ''}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </button>
+      { goesBack ? null : <Menu open={open}/> }
+    </>
+  )
+}
 
-  render () {
-    return (
-      <>
-        <button className='p-1 focus:outline-black lg:hidden'
-                onClick={() => this.toggle()}>
-          <div id="nav-icon4"
-               className={this.state.open ? 'open' : ''}>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </button>
+Navigation.propTypes = {
+  goesBack: PropTypes.bool,
+}
 
-        <Menu open={this.state.open}/>
-      </>
-    )
-  }
+Navigation.defaultProps = {
+  goesBack: true,
 }
 
 export default Navigation

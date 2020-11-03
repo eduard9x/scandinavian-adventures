@@ -18,10 +18,12 @@ const Header = ({siteTitle, goesBack}) => (
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
+  goesBack: PropTypes.bool,
 }
 
 Header.defaultProps = {
-  siteTitle: ``,
+  siteTitle: '',
+  goesBack: true,
 }
 
 export default Header

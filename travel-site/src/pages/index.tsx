@@ -8,7 +8,7 @@ import Featured from '../components/featured'
 import Carousel from '../components/carousel'
 
 const IndexPage = () => (
-  <Layout>
+  <Layout goesBack={false}>
     <SEO title="Home"/>
 
     <Hero data={JSONData.featured[0]}/>

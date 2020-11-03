@@ -27,7 +27,7 @@ const DetailsPage = ({location}) => {
   }
 
   return (
-    <Layout goesBack={true}>
+    <Layout>
       <SEO title="Details page"/>
       <div className='lg:flex w-full lg:flex-wrap lg:px-5'>
         <div className='image-holder lg:w-9/12'>

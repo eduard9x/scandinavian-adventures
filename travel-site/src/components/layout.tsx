@@ -1,10 +1,3 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
-
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql, useStaticQuery } from 'gatsby'
@@ -36,6 +29,11 @@ const Layout = ({children, goesBack}) => {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  goesBack: PropTypes.bool,
+}
+
+Layout.defaultProps = {
+  goesBack: true,
 }
 
 export default Layout
