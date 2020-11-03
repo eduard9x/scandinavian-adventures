@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[8],{Uk0q:function(e,t,n){"use strict";n.r(t);var a=n("q1tI"),c=n.n(a),l=n("Wbzz"),r=n("9Dj+"),o=n("H8eV");t.default=function(){return c.a.createElement(r.a,null,c.a.createElement(o.a,{title:"Experiences page"}),c.a.createElement("h1",null,"Hi from the Experiences page"),c.a.createElement("p",null,"Welcome to Experiences page"),c.a.createElement(l.Link,{to:"/"},"Go back to the homepage"))}}}]);
+//# sourceMappingURL=component---src-pages-experiences-tsx-ec65533b7d9f6cea3c60.js.map

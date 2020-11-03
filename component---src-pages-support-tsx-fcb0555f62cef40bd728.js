@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[10],{dlMv:function(e,t,a){"use strict";a.r(t);var n=a("q1tI"),o=a.n(n),p=a("Wbzz"),l=a("9Dj+"),r=a("H8eV");t.default=function(){return o.a.createElement(l.a,null,o.a.createElement(r.a,{title:"Support page"}),o.a.createElement("h1",null,"Hi from the Support page"),o.a.createElement("p",null,"Welcome to Support page"),o.a.createElement(p.Link,{to:"/"},"Go back to the homepage"))}}}]);
+//# sourceMappingURL=component---src-pages-support-tsx-fcb0555f62cef40bd728.js.map
