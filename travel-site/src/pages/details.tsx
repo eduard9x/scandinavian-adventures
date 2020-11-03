@@ -6,7 +6,6 @@ import { Destinations } from '../models/destinations'
 import BookTicket from '../components/book-ticket'
 import ReactMarkdown from 'react-markdown'
 import useWindowSize from '../hooks/window-size'
-import isMobile from '../utils/mobile'
 import { navigate } from 'gatsby'
 
 const DetailsPage = ({location}) => {
@@ -18,13 +17,7 @@ const DetailsPage = ({location}) => {
   }
 
   const body = data?.body?.split('\n').join('\n\n')
-  const mobile: boolean = isMobile()
-  const windowSize = useWindowSize()
-
-  let mediaUrl = data?.media['small']?.url
-  if (location?.state?.featured && !mobile) {
-    mediaUrl = data?.media['large']?.url
-  }
+  const windowSize: { width?: number, height?: number } = useWindowSize()
 
   return (
     <Layout>
@@ -32,9 +25,10 @@ const DetailsPage = ({location}) => {
       <div className='lg:flex w-full lg:flex-wrap lg:px-5'>
         <div className='image-holder lg:w-9/12'>
           <img style={{
-            width: isMobile() ? `${windowSize?.width}px` : '100%',
-            height: isMobile() ? `${windowSize?.width}px` : '100%',
-          }} src={mediaUrl}/>
+            width: `${windowSize?.width}px`,
+            height: `${windowSize?.width}px`,
+          }} className='block sm:hidden' src={data?.media['small']?.url}/>
+          <img className='hidden sm:block w-full' src={data?.media['large']?.url}/>
         </div>
 
         <div className='lg:w-3/12'>
