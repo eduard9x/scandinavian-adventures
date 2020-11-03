@@ -1,16 +1,43 @@
-@media (min-width: 1024px) {
+.featured {
+  .book-button {
+    width: 100%;
+  }
+}
+
+@media (min-width: 640px) {
+  .featured {
+    .book-button {
+      width: auto;
+      padding-right: 3rem;
+      padding-left: 3rem;
+    }
+  }
+}
+
+@media (min-width: 768px) {
   .featured {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
 
     &.featured-first {
-      flex: 0.33 0.33 300px;
       margin-right: 10px;
     }
+
     &.featured-second {
-      flex: 1 1 300px;
       margin-left: 10px;
+    }
+
+    .same-height {
+      height: 300px;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .featured {
+    .same-height {
+      height: 418px;
     }
   }
 }
