@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header renders correctly 1`] = `
+<header
+  className="bg-white fixed w-full z-50"
+>
+  <div
+    className="my-0 mx-auto py-6 px-5 justify-between flex items-center h-full"
+    style={
+      Object {
+        "maxWidth": 1280,
+      }
+    }
+  >
+    <h3
+      className="m-0 inline-flex"
+    >
+      <a
+        className="text-black no-underline focus:outline-black"
+        href="/"
+      >
+        Default Starter
+      </a>
+    </h3>
+    <button
+      className="p-1 focus:outline-black "
+      onClick={[Function]}
+    >
+      <div
+        className="open"
+        id="nav-icon4"
+      >
+        <span />
+        <span />
+        <span />
+      </div>
+    </button>
+  </div>
+</header>
+`;

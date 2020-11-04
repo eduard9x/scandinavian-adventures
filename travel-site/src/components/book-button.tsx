@@ -16,7 +16,7 @@ const BookButton = ({id, title, variant, featured, full, callback}) => {
 
   return (
     <>
-      <button className={`book-button p-5 ${disabled ? 'disabled flex' : ''} ${full ? 'w-full' : ''}`}
+      <button key={id} className={`book-button p-5 ${disabled ? 'disabled flex' : ''} ${full ? 'w-full' : ''}`}
               onClick={() => callback ? onClick() : navigate(`/details`, {
                 state: {
                   pageId: id,
